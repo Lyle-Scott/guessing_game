@@ -1,0 +1,35 @@
+<script>
+var 	guess,
+		message,
+		answer;
+var	avenger = false;
+
+while (avenger===false) {
+	var guess = prompt("I have a favorite Avenger. Can you guess who it is?");
+		switch (guess) {
+			case ("Iron Man"):
+				avenger = true;
+				message = ("Yeah, I'm a nutter for Tony Stark.");
+				break;
+			case ("Captain America"):
+				message = ("That guy drives me crazy. No.");
+				break;
+			case ("The Hulk"):
+				message = ("He's pretty awesome, but not my favorite.");
+				break;
+			case ("Black Widow"):
+				message = ("She's probably second best, but not my favorite.");
+				break;
+			case ("Hawkeye"):
+				message = ("They never did enough with his character... Nope. Wasted potential.");
+				break;
+			case ("Thor"):
+				message = ("Nah... he's too high, mighty and haughty for me.");
+				break;
+			default:
+				message = ("Are we talking about the same thing? I mean just the Avengers from the first movie");
+		};
+	alert(message);
+};
+
+</script>
