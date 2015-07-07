@@ -1,29 +1,29 @@
 <script>
-var 	guess,
+var guess,
 		message,
 		answer;
 var	avenger = false;
 
 while (avenger===false) {
-	var guess = prompt("I have a favorite Avenger. Can you guess who it is?");
+	var guess = prompt("I have a favorite Avenger. Can you guess who it is?").toLowerCase();
 		switch (guess) {
-			case ("Iron Man"):
+			case ("iron man"):
 				avenger = true;
 				message = ("Yeah, I'm a nutter for Tony Stark.");
 				break;
-			case ("Captain America"):
+			case ("captain america"):
 				message = ("That guy drives me crazy. No.");
 				break;
-			case ("The Hulk"):
+			case ("the hulk"):
 				message = ("He's pretty awesome, but not my favorite.");
 				break;
-			case ("Black Widow"):
+			case ("black widow"):
 				message = ("She's probably second best, but not my favorite.");
 				break;
-			case ("Hawkeye"):
+			case ("hawkeye"):
 				message = ("They never did enough with his character... Nope. Wasted potential.");
 				break;
-			case ("Thor"):
+			case ("thor"):
 				message = ("Nah... he's too high, mighty and haughty for me.");
 				break;
 			default:
