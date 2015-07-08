@@ -1,55 +1,61 @@
 <script>
-
-// WOOOOOOOOOOOO
-
 var guess,
-		message,
-		answer;
+	message,
+	answer;
 var	avenger = false;
-
+	tries = 0;
 while (avenger===false) {
-	var guess = prompt("I have a favorite Avenger. Can you guess who it is?").toLowerCase();
-		switch (guess) {
-			case ("iron man"):
-			case ("tony"):
-			case ("stark"):
-			case ("tony stark"):
-			case ("ironman"):
-				avenger = true;
-				message = ("Yeah, I'm a nutter for Tony Stark.");
-				break;
-			case ("captain america"):
-			case ("cap"):
-			case ("steve"):
-			case ("steve rogers"):
-
-				message = ("That guy drives me crazy. No.");
-				break;
-			case ("the hulk"):
-			case ("hulk"):
-			case ("bruce"):
-			case ("banner"):
-				message = ("He's pretty awesome, but not my favorite.");
-				break;
-			case ("black widow"):
-			case ("natasha"):
-			case ("romanoff"):
-				message = ("She's probably second best, but not my favorite.");
-				break;
-			case ("hawkeye"):
-			case ("clint"):
-			case ("barton"):
-			case ("clint barton"):
-				message = ("They never did enough with his character... Nope. Wasted potential.");
-				break;
-			case ("thor"):
-			case ("god of thunder"):
-				message = ("Nah... he's too high, mighty and haughty for me.");
-				break;
-			default:
-				message = ("Are we talking about the same thing? I mean just the Avengers from the first movie");
-		};
-	alert(message);
+  var guess = prompt("I have a favorite Avenger. Can you guess who it is?").toLowerCase();
+    switch (guess) {
+	  case ("iron man"):
+	  case ("tony"):
+	  case ("stark"):
+	  case ("tony stark"):
+	  case ("ironman"):
+		avenger = true;
+		message = ("Yeah, I'm a nutter for Tony Stark.");
+		break;
+	  case ("captain america"):
+	  case ("cap"):
+	  case ("steve"):
+	  case ("steve rogers"):
+		message = ("That guy drives me crazy. No.");
+		break;
+	  case ("the hulk"):
+	  case ("hulk"):
+	  case ("bruce"):
+	  case ("banner"):
+	  case ("bruce banner");
+	  case ("doctor banner");
+	  case ("dr banner");
+	  case ("dr. banner");
+		message = ("He's pretty awesome, but not my favorite.");
+		break;
+	  case ("black widow"):
+	  case ("natasha"):
+	  case ("romanoff"):
+	  case ("agent romanoff");
+		message = ("She's probably second best, but not my favorite.");
+		break;
+	  case ("hawkeye"):
+	  case ("clint"):
+	  case ("barton"):
+	  case ("clint barton"):
+		message = ("They never did enough with his character... Nope. Wasted potential.");
+		break;
+	  case ("thor"):
+	  case ("god of thunder"):
+		message = ("Nah... he's too high, mighty and haughty for me.");
+		break;
+	  default:
+		message = ("Are we talking about the same thing? I mean just the Avengers from the first movie");
+	};
+  alert(message);
+  tries++;
+  if (tries > 4) {
+  	alert("That's all the time we have for this today. The answer was Iron Man.");
+  	avenger = true;
+  }
 };
 
 </script>
