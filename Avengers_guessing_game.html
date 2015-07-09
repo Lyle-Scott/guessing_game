@@ -1,10 +1,14 @@
 <script>
-function Game (tries, gameOn, guess, message){
-	this.tries = tries;
+function Game(gameOn, guess, message, tries) {
 	this.gameOn = gameOn;
 	this.guess = guess;
 	this.message = message;
+	this.tries = tries;
 	this.attempt = function() {
+		gameOn = true;
+		guess = "";
+		message = "";
+		tries = 0;
 		while (gameOn) {
 		guess = prompt("I have a favorite Avenger. Can you guess who it is in less than five tries? You have " + (5-tries) + " remaining.").toLowerCase();
 		switch (guess) {
@@ -74,12 +78,12 @@ function Game (tries, gameOn, guess, message){
   	} else if (tries <= 4) {
   		alert("You got it in " + tries + " tries.");
   	}
-  	if (tries <=4) {
+  	if (tries <= 4) {
   		alert("You win. Thanks for playing.");
   	}
   }
 }
 
-	var play = new Game(0,true);
+	var play = new Game();
 	play.attempt();
 </script>
