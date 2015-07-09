@@ -6,7 +6,7 @@ function Game (tries, gameOn, guess, message){
 	this.message = message;
 	this.attempt = function() {
 		while (gameOn) {
-		guess = prompt("I have a favorite Avenger. Can you guess who it less than five tries? You have " + (5-tries) + " tries remaining.").toLowerCase();
+		guess = prompt("I have a favorite Avenger. Can you guess who it is in less than five tries? You have " + (5-tries) + " remaining.").toLowerCase();
 		switch (guess) {
 
 			case ("iron man"):
@@ -40,6 +40,9 @@ function Game (tries, gameOn, guess, message){
 			case ("natasha"):
 			case ("romanoff"):
 			case ("agent romanoff"):
+			case ("natty"):
+			case ("nat"):
+			case ("blackwidow"):
 			message = ("She's probably second best, but not my favorite.");
 			break;
 
