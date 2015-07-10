@@ -38,84 +38,85 @@
 		</table>
 		<h3>Game instructions:</h3>
 		<p>This is a simple game that's mostly self explanatory. You'll have to try to guess which one of the Avengers is my favorite. If you guess correctly, you will receive a wonderful infusion of the special, empty kind of satisfaction that one receives upon the correct yet arbitrary completion of a task that does not demonstrate unusual talent or skill in any particular personal aptitude. Kudos to you!</p>
+
 		<script>
-		function Game(gameOn, guess, message, tries) {
-			this.gameOn = gameOn;
-			this.guess = guess;
-			this.message = message;
-			this.tries = tries;
+		function Game(favorite) {
+			this.favorite = favorite;
 			this.attempt = function() {
 				gameOn = true;
 				guess = "";
 				message = "";
 				tries = 0;
 				while (gameOn) {
-				guess = prompt("I have a favorite Avenger. Can you guess who it is in less than five tries? You have " + (5-tries) + " remaining.").toLowerCase();
-				switch (guess) {
+					guess = prompt("I have a favorite Avenger. Can you guess who it is in less than five tries? You have " + (5-tries) + " remaining.").toLowerCase();
+					switch (guess) {
 
-					case ("iron man"):
-					case ("tony"):
-					case ("stark"):
-					case ("tony stark"):
-					case ("ironman"):
+						case ("iron man"):
+						case ("tony"):
+						case ("stark"):
+						case ("tony stark"):
+						case ("ironman"):
+						if (this.favorite == "Iron Man") {
+							gameOn = false;
+							message = ("Yeah, I'm a nutter for Tony Stark."); 
+							} else {
+								message = ("That dude is a snarky jerk. No way.");
+							}
+						break;
+
+						case ("captain america"):
+						case ("cap"):
+						case ("steve"):
+						case ("steve rogers"):
+						message = ("That guy drives me crazy. No.");
+						break;
+
+						case ("the hulk"):
+						case ("hulk"):
+						case ("bruce"):
+						case ("banner"):
+						case ("bruce banner"):
+						case ("doctor banner"):
+						case ("dr banner"):
+						case ("dr. banner"):
+						message = ("He's pretty awesome, but not my favorite.");
+						break;
+
+						case ("black widow"):
+						case ("natasha"):
+						case ("romanoff"):
+						case ("agent romanoff"):
+						case ("romanova"):
+						case ("agent romanova"):
+						case ("natty"):
+						case ("nat"):
+						case ("blackwidow"):
+						message = ("She's probably second best, but not my favorite.");
+						break;
+
+						case ("hawkeye"):
+						case ("clint"):
+						case ("barton"):
+						case ("clint barton"):
+						message = ("They never did enough with his character... Nope. Wasted potential.");
+						break;
+
+						case ("thor"):
+						message = ("Nah... he's too high, mighty and haughty for me.");
+						break;
+
+						default:
+						message = ("Are we talking about the same thing? I mean just the Avengers from the first movie");
+						};
+					tries++;
+					alert(message);
+
+					if (tries > 4) {
+					alert("You've used up all your tries. The answer was " + this.favorite + ". Better luck next time!");
 					gameOn = false;
-					message = ("Yeah, I'm a nutter for Tony Stark.");
-					break;
-
-					case ("captain america"):
-					case ("cap"):
-					case ("steve"):
-					case ("steve rogers"):
-					message = ("That guy drives me crazy. No.");
-					break;
-
-					case ("the hulk"):
-					case ("hulk"):
-					case ("bruce"):
-					case ("banner"):
-					case ("bruce banner"):
-					case ("doctor banner"):
-					case ("dr banner"):
-					case ("dr. banner"):
-					message = ("He's pretty awesome, but not my favorite.");
-					break;
-
-					case ("black widow"):
-					case ("natasha"):
-					case ("romanoff"):
-					case ("agent romanoff"):
-					case ("romanova"):
-					case ("agent romanova"):
-					case ("natty"):
-					case ("nat"):
-					case ("blackwidow"):
-					message = ("She's probably second best, but not my favorite.");
-					break;
-
-					case ("hawkeye"):
-					case ("clint"):
-					case ("barton"):
-					case ("clint barton"):
-					message = ("They never did enough with his character... Nope. Wasted potential.");
-					break;
-
-					case ("thor"):
-					message = ("Nah... he's too high, mighty and haughty for me.");
-					break;
-
-					default:
-					message = ("Are we talking about the same thing? I mean just the Avengers from the first movie");
-					};
-				tries++;
-				alert(message);
-
-				if (tries > 4) {
-				alert("That's all the time we have for this today. The answer was Iron Man.");
-				gameOn = false;
-				alert("Thanks for playing. Better luck next time.");
-				}
+					}
 		  	}
-		  	if (tries === 1) {
+		  	if (tries == 1) {
 		  		alert("You got it on your first try!");
 		  	} else if (tries <= 4) {
 		  		alert("You got it in " + tries + " tries.");
@@ -126,8 +127,8 @@
 		  }
 		}
 
-		var play = new Game();
-		play.attempt();
+		var ironManIsMyFavorite = new Game("Iron Man");
+		ironManIsMyFavorite.attempt();
 		</script>
 	</body>
 </html>
