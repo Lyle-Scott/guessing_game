@@ -32,7 +32,12 @@ function Game(favorite) {
 				case ("CAP"):
 				case ("STEVE"):
 				case ("STEVE ROGERS"):
-				message = ("That guy drives me crazy. No.");
+				if (this.favorite == "Captain America") {
+					gameOn = false;
+					message = ("Hell yeah! Cap is totally the best."); 
+					} else {
+						message = ("That guy drives me crazy. No.");
+					}
 				break;
 
 				case ("THE HULK"):
@@ -94,3 +99,6 @@ function Game(favorite) {
 
 var ironManIsMyFavorite = new Game("Iron Man");
 ironManIsMyFavorite.attempt();
+
+// var captainAmericaIsMyFavorite = new Game("Captain America");
+// captainAmericaIsMyFavorite.attempt();
