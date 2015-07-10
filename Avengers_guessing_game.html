@@ -1,5 +1,4 @@
 <script>
-
 	function Game (tries, gameOn, guess, message){
 		this.tries = tries;
 		this.gameOn = gameOn;
@@ -7,8 +6,8 @@
 		this.message = message;
 		this.attempt = function() {
 			while (gameOn) {
-			    guess = prompt("I have a favorite Avenger. Can you guess who it is?").toLowerCase();
-			    switch (guess) {
+				guess = prompt("I have a favorite Avenger. Can you guess who it is?").toLowerCase();
+			  switch (guess) {
 				  case ("iron man"):
 				  case ("tony"):
 				  case ("stark"):
@@ -60,7 +59,7 @@
 			  }
 			};
 		}
-}
+	}
 	var lyle = new Game(0,true);
 	lyle.attempt();
 </script>
