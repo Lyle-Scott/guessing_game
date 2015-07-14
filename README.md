@@ -9,3 +9,4 @@ Version 2.0 Put the game inside an object method. Now we are able to pass the nu
 Version 2.1 Cleaned up formatting, added messages about number of turns.
 Version 2.2 fixed typos.
 Version 2.3 streamlined variables assignment.
+Verison 3.0 added html
